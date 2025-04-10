@@ -31,4 +31,8 @@ public class FlyBehaviour : MonoBehaviour
             0, 0, _rigidbody.linearVelocityY * _rotationSpeed);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameManager.instance.GameOver();
+    }
 }
